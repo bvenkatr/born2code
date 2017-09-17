@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dynamic hamburger</title>
+    <style>
+        .container {
+            display: block;
+            margin: 50px;
+        }
+        .line {
+            width: 50px;
+            height: 5px;
+            background: black;
+            margin: 6px;
+        }
+    </style>
+</head>
+<body>
+<div class="container" id="ham">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+</div>
+
+<script>
+    var ham = document.getElementById("ham");
+    ham.onclick = function () {
+        ham.classList.toggle("clicked");
+    }
+</script>
+</body>
+</html>
