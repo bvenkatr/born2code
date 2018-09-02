@@ -1,3 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
 .idea
 Challenges/node_modules/
+testdataloader/config.ini
+testdataloader/node_modules/
+node_modules
