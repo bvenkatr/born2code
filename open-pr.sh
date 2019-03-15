@@ -52,7 +52,7 @@ data=$(cat <<-EOF
     "title": "$title",
     "base": "master",
     "head": "$current_branch",
-    "body": "open pr script"
+    "body": "$@"
 }
 EOF
 )
