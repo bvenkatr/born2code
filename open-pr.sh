@@ -50,7 +50,7 @@ check_in_set "title" title
 data=$(cat <<-EOF
 {
     "title": "$title",
-    "base": "$master",
+    "base": "master",
     "head": "$current_branch",
     "body": "open pr script"
 }
