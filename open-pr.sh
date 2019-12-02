@@ -49,10 +49,10 @@ check_in_set "title" title
 
 data=$(cat <<-EOF
 {
-    "title": "title",
+    "title": "$title",
     "base": "master",
-    "head": "test",
-    "body": "open pr script"
+    "head": "$current_branch",
+    "body": "$@"
 }
 EOF
 )
