@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	example_simple "./src/simple"
+	simplepb "./src/simple"
 )
 
 func main() {
@@ -11,11 +11,13 @@ func main() {
 }
 
 func doSimple() {
-	sm := example_simple.SimpleMessage{
+	sm := simplepb.SimpleMessage{
 		Id:         123,
 		IsSimple:   true,
 		Name:       "My Simple Message",
 		SampleList: []int32{1, 4, 7, 8},
 	}
 	fmt.Println(sm)
+	sm.Name = "I renamed you"
+	fmt.Println(sm.GetId())
 }
