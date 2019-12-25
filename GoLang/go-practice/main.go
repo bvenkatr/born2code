@@ -1,11 +1,19 @@
 package main
 
 import (
-	test "./formatting"
+	"./formatting"
+	"./scanning"
+	"fmt"
 )
 
 func main() {
-	test.OutputToStdout()
-	// filename, err := test.OutputToWriter()
-	// fmt.Println(filename, err)
+	formatting.OutputToStdout()
+	filename, err := formatting.OutputToWriter()
+	fmt.Println(filename, err)
+
+	scanning.ScanWithSscan()
+	scanning.ScanWithSscanf()
+	scanning.ScanWithSscanln()
+
+	scanning.ScanWithScan()
 }

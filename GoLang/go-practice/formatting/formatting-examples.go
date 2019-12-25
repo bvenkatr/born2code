@@ -1,8 +1,8 @@
-package test
+package formatting
 
 import (
-	fmt "fmt"
-	ioutil "io/ioutil"
+	"fmt"
+	"io/ioutil"
 )
 
 type point struct{ x, y int64 }
