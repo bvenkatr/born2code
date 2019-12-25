@@ -1,23 +1,69 @@
 package main
 
 import (
-	"fmt"
+	// "fmt"
+	// "io/ioutil"
+	// "log"
 
-	simplepb "./src/simple"
+	// simplepb "./src/simple"
+	test "./test"
+	// "github.com/golang/protobuf/jsonpb"
+	// "github.com/golang/protobuf/proto"
 )
 
 func main() {
-	doSimple()
+	// sm := doSimple()
+
+	// writeToFile("simple.bin", sm)
+
+	// sm2 := &simplepb.SimpleMessage{}
+	// readFromFile("simple.bin", sm2)
+	// fmt.Println(sm2)
+
+	test.OutputToStdout()
 }
 
-func doSimple() {
-	sm := simplepb.SimpleMessage{
-		Id:         123,
-		IsSimple:   true,
-		Name:       "My Simple Message",
-		SampleList: []int32{1, 4, 7, 8},
-	}
-	fmt.Println(sm)
-	sm.Name = "I renamed you"
-	fmt.Println(sm.GetId())
-}
+// func toJSON(pb proto.Message) {
+// 	jsonpb.Marshaller()
+// }
+
+// func writeToFile(filename string, pb proto.Message) error {
+// 	out, err := proto.Marshal(pb)
+// 	if err != nil {
+// 		log.Fatalln("Can't serialize to bytes", err)
+// 		return err
+// 	}
+
+// 	if err := ioutil.WriteFile(filename, out, 0644); err != nil {
+// 		log.Fatalln("Can't write to file", err)
+// 		return err
+// 	}
+
+// 	fmt.Println("Data has been written.")
+// 	return nil
+// }
+
+// func readFromFile(filename string, pb proto.Message) error {
+// 	in, err := ioutil.ReadFile(filename)
+// 	if err != nil {
+// 		log.Fatalln("Couldn't read from file", err)
+// 		return err
+// 	}
+
+// 	if err := proto.Unmarshal(in, pb); err != nil {
+// 		log.Fatalln("Can't unserialize the data", err)
+// 		return err
+// 	}
+
+// 	return nil
+// }
+
+// func doSimple() *simplepb.SimpleMessage {
+// 	sm := simplepb.SimpleMessage{
+// 		Id:         123,
+// 		IsSimple:   true,
+// 		Name:       "My Simple",
+// 		SampleList: []int32{1, 4, 7, 8},
+// 	}
+// 	return &sm
+// }
