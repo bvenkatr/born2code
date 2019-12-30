@@ -6,7 +6,8 @@ import (
 	// "fmt"
 	// strings_and_bytes "./string-and-bytes"
 	//"./strconv-package"
-	"./json-example"
+	//"./json-example"
+	"./regex-example"
 )
 
 func main() {
@@ -28,6 +29,8 @@ func main() {
 
 	//strconv_examples.StringToInt()
 
-	data := json_example.UpdateJson()
-	json_example.WriteToNewFile(data)
+	//data := json_example.UpdateJson()
+	//json_example.WriteToNewFile(data)
+
+	regex_example.Match()
 }
