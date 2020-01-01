@@ -7,8 +7,11 @@ import (
 	// strings_and_bytes "./string-and-bytes"
 	//"./strconv-package"
 	//"./json-example"
-	"./regex-example"
+	//"./regex-example"
+	"./error-examples"
 )
+
+var version string
 
 func main() {
 	// formatting.OutputToStdout()
@@ -32,5 +35,9 @@ func main() {
 	//data := json_example.UpdateJson()
 	//json_example.WriteToNewFile(data)
 
-	regex_example.Match()
+	//regex_example.Match()
+
+	//course_backups.CourseBackups()
+
+	error_examples.ErrorExamples()
 }
