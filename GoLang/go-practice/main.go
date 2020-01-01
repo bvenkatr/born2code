@@ -39,5 +39,5 @@ func main() {
 
 	//course_backups.CourseBackups()
 
-	error_examples.ErrorExamples()
+	error_examples.CustomErrors()
 }
