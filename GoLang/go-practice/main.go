@@ -8,7 +8,8 @@ import (
 	//"./strconv-package"
 	//"./json-example"
 	//"./regex-example"
-	"./error-examples"
+	//"./error-examples"
+	"./web-server"
 )
 
 var version string
@@ -39,5 +40,8 @@ func main() {
 
 	//course_backups.CourseBackups()
 
-	error_examples.CustomErrors()
+	//error_examples.CustomErrors()
+
+	//web_server.WebServer()
+	web_server.CustomServeMux()
 }
