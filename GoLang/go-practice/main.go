@@ -9,7 +9,9 @@ import (
 	//"./json-example"
 	//"./regex-example"
 	//"./error-examples"
-	"./web-server"
+	//"./web-server"
+	//"./checsum_and_content_hash"
+	"./io-and-ioutil"
 )
 
 var version string
@@ -43,5 +45,8 @@ func main() {
 	//error_examples.CustomErrors()
 
 	//web_server.WebServer()
-	web_server.CustomServeMux()
+	//web_server.CustomServeMux()
+
+	//checsum_and_content_hash.CheckSum()
+	io_and_ioutil.StringNewReader()
 }
