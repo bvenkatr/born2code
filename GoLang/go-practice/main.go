@@ -11,7 +11,9 @@ import (
 	//"./error-examples"
 	//"./web-server"
 	//"./checsum_and_content_hash"
-	"./io-and-ioutil"
+	//"./io-and-ioutil"
+	"./goroutines"
+	"fmt"
 )
 
 var version string
@@ -48,5 +50,13 @@ func main() {
 	//web_server.CustomServeMux()
 
 	//checsum_and_content_hash.CheckSum()
-	io_and_ioutil.StringNewReader()
+	//io_and_ioutil.StringNewReader()
+
+	for i := 0; i < 10; i++ {
+		go goroutines.Test_Go_Routines(i)
+	}
+	var str string
+	if _, err := fmt.Scanf("%s", &str); err != nil {
+		fmt.Println(err)
+	}
 }
