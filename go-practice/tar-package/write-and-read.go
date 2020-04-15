@@ -3,10 +3,13 @@ package main
 import (
 	"archive/tar"
 	"bytes"
+	"fmt"
+	"io"
 	"log"
+	"os"
 )
 
-func main()  {
+func main() {
 	// Create and add some files to the archive
 	var buf bytes.Buffer
 	tw := tar.NewWriter(&buf)
@@ -16,7 +19,7 @@ func main()  {
 	}{
 		{
 			Name: "readme.txt",
-			Body: "his archive contains some text files.",
+			Body: "This archive contains some text files.",
 		},
 		{
 			Name: "gopher.txt",
@@ -45,5 +48,24 @@ func main()  {
 	}
 	if err := tw.Close(); err != nil {
 		log.Fatal(err)
+	}
+
+	// Open and iterate through the files in the archive
+	tr := tar.NewReader(&buf)
+	for {
+		hdr, err := tr.Next()
+		if err == io.EOF {
+			break // end of archive
+		}
+
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		fmt.Printf("Contents of %s:\n", hdr.Name)
+		if _, err := io.Copy(os.Stdout, tr); err != nil {
+			log.Fatal(err)
+		}
+		fmt.Println()
 	}
 }
