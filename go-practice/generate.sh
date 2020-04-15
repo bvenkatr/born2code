@@ -1,1 +1,1 @@
-protoc -I src/ --go_out=src/ src/simple/simple.proto
+protoc -I protobuf-example-go/src/ --go_out=protobuf-example-go/src/ protobuf-example-go/src/simple/simple.proto

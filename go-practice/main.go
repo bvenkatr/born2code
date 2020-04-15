@@ -1,25 +1,13 @@
 package main
 
 import (
-	// "./formatting"
-	// "./scanning"
-	// "fmt"
-	// strings_and_bytes "./string-and-bytes"
-	//"./strconv-package"
-	//"./json-example"
-	//"./regex-example"
-	//"./error-examples"
-	//"./web-server"
-	//"./checsum_and_content_hash"
-	//"./io-and-ioutil"
-	"./goroutines"
-	"fmt"
+	"./formatting"
 )
 
 var version string
 
 func main() {
-	// formatting.OutputToStdout()
+	formatting.OutputToStdout()
 	// filename, err := formatting.OutputToWriter()
 	// fmt.Println(filename, err)
 
@@ -51,12 +39,4 @@ func main() {
 
 	//checsum_and_content_hash.CheckSum()
 	//io_and_ioutil.StringNewReader()
-
-	for i := 0; i < 10; i++ {
-		go goroutines.Test_Go_Routines(i)
-	}
-	var str string
-	if _, err := fmt.Scanf("%s", &str); err != nil {
-		fmt.Println(err)
-	}
 }
