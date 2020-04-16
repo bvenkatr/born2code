@@ -12,7 +12,8 @@ import (
 func main() {
 	// Create and add some files to the archive
 	var buf bytes.Buffer
-	tw := tar.NewWriter(&buf)
+	f, _ := os.Create("test.tar")
+	tw := tar.NewWriter(f)
 
 	var files = []struct {
 		Name, Body string
