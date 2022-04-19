@@ -37,3 +37,4 @@ IntersectionObserverAPI.html
 .vscode/
 getAuthToken.js
 .DS_Store
+target/
