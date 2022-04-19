@@ -4,3 +4,4 @@ Challenges/node_modules/
 testdataloader/config.ini
 testdataloader/node_modules/
 node_modules
+target/
