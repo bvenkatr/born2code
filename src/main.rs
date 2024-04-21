@@ -4,6 +4,7 @@ mod controllers;
 mod my;
 mod rust_practice;
 mod yours;
+mod misc;
 
 fn main() {
     // my::function();
@@ -18,4 +19,6 @@ fn main() {
     foo::hello();
     let user_info = controllers::user_controller::get_user(1);
     println!("{}", user_info);
+    println!("factorial is {} ", misc::factorial::facto(4));
+    println!("factorial is {} ", misc::factorial::factorial_recursive(4)); 
 }
